@@ -1,0 +1,195 @@
+body{
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(99, 75, 53);
+    
+}
+#foodlogo{
+    border-radius: 70px;
+}
+h1{
+    position: relative;
+    left: 10px;
+}
+
+
+#header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+}
+h1{
+    color: azure;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.homeBtn{
+   background-color: brown;
+}
+
+#randomName{
+    color: rgb(0, 0, 0);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: 600px;
+    margin-top: 60px;
+}
+
+input{
+     width: 300px;
+     height: 40px;
+     background-color: rgb(203, 192, 172);
+     font-family: 'Times New Roman', Times, serif;
+     margin-right:580px ;
+} 
+
+#inputBox{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    top: 50px;
+}
+
+#randomImage{
+    margin-left: 550px;
+    height:350px; 
+    width:500px;
+    position: relative;
+    top: 50px;
+    
+  
+}
+
+#changeBtn{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 720px; 
+    margin-top: 80px;
+    cursor: pointer;
+    font-style: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+
+#ingredientBox{
+    width: 250px;
+    height: 400px;
+    background-color: rgb(147, 164, 158);
+    position: absolute;
+    overflow: scroll;
+    top: 100px;
+    right: 200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#close{
+    position: absolute;
+    top: 90px;
+    margin-left: 1280px;
+}
+
+.mealimg{
+  
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.meal{
+    /* making searched meals like a grid */
+    display: inline-block;   
+    margin: 0px 20px 20px 0px;
+    text-align:center;
+    max-width: 200px;
+    margin-top: 40px;
+    margin-left: 200px;
+
+}
+
+#footer{
+    margin-left: 700px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ 
+h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* making it mobile responsive */
+
+@media only screen and (max-width: 767px) {
+    #header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .title {
+      margin-bottom: 10px;
+    }
+  
+    #randomName {
+      margin-left: 85px;
+      margin-top: 90px;
+    }
+  
+    input {
+      width: 100%;
+      margin: 20px auto;
+    }
+  
+    #randomImage {
+      margin: 20px auto;
+      height: 170px;
+      width: 170px;
+      margin-left: 100px;
+    }
+  
+    #changeBtn {
+      margin: 20px auto;
+      margin-left: 130px;
+    }
+  
+    #ingredientBox {
+      width: 90%;
+      position: static;
+      top: auto;
+      right: auto;
+      margin: 20px auto;
+      height: auto;
+      overflow: auto;
+    }
+  
+    #close {
+      position: static;
+      top: auto;
+      margin-left: auto;
+      text-align: right;
+    }
+  
+    .meal {
+      display: block;
+      max-width: none;
+      margin: 20px auto;
+      text-align: center;
+    }
+  
+    .mealimg {
+      width: 150px;
+      height: 150px;
+    }
+  
+    #footer {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  
