@@ -1,8 +1,10 @@
 body{
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(99, 75, 53);
-    
+    /* background-color: rgb(99, 75, 53); */
+    background-image: url("./back2.png");
+    background-repeat: no-repeat;
+    background-size:cover;   
 }
 #foodlogo{
     border-radius: 70px;
@@ -29,13 +31,13 @@ h1{
     font-style: italic;
     font-weight: 200;
 }
-
+ 
 .homeBtn{
    background-color: brown;
 }
 
 #randomName{
-    color: rgb(0, 0, 0);
+    color:white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: larger;
     font-weight: bolder;
@@ -53,8 +55,11 @@ input{
 
 #inputBox{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: relative;
+    position: absolute;
     top: 50px;
+    right: 600px;
+    outline: none;
+    border-radius: 10px;
 }
 
 #randomImage{
@@ -62,7 +67,8 @@ input{
     height:350px; 
     width:500px;
     position: relative;
-    top: 50px;
+    top: 10px;
+    border-radius: 20px;
     
   
 }
@@ -73,36 +79,56 @@ input{
     border-radius: 20px;
     margin-left: 720px; 
     margin-top: 80px;
-    cursor: pointer;
+    /* cursor: pointer; */
     font-style: normal;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: x-large;
+    position: relative;
+    bottom: 45px;
+    /* z-index: -1; */
+}
+
+#changeBtn:hover{
+  transform: scale3d(1.1,1.1,1.1);
+  background-color:rgb(196, 210, 42);
+  cursor: pointer;
 }
 
 #ingredientBox{
-    width: 250px;
-    height: 400px;
+    position: fixed;
+    display: flex;
+    width: 100vh;
+    height: 30vw;
     background-color: rgb(147, 164, 158);
-    position: absolute;
     overflow: scroll;
     top: 100px;
-    right: 200px;
+    right: 400px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 27px;
 }
 
 #close{
-    position: absolute;
-    top: 90px;
-    margin-left: 1280px;
+    position: fixed ;
+    top: 100px;
+    margin-left: 1050px;
+
+    
+
 }
 
 .mealimg{
   
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 1000px;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: repeat(3,300px);
+
 }
 
+.mealimg:hover{
+  transform: scale(1.1);
+  }
 .meal{
     /* making searched meals like a grid */
     display: inline-block;   
@@ -114,18 +140,34 @@ input{
 
 }
 
+
+#randomName{
+  font-size: 34px;
+  color: aliceblue;
+  position: relative;
+  top: 20px;
+}
+
 #footer{
     margin-left: 700px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
 }
  
 h3{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+    cursor: pointer;
+    width: 300px;
+    
 }
 
 /* making it mobile responsive */
 
 @media only screen and (max-width: 767px) {
+  body{
+    background: black;
+  }
     #header {
       flex-direction: column;
       align-items: center;
@@ -134,11 +176,13 @@ h3{
   
     .title {
       margin-bottom: 10px;
+      /* background-size: cover; */
     }
   
     #randomName {
-      margin-left: 85px;
+      margin-left: 75px;
       margin-top: 90px;
+      /* text-align: center; */
     }
   
     input {
@@ -148,14 +192,15 @@ h3{
   
     #randomImage {
       margin: 20px auto;
-      height: 170px;
-      width: 170px;
+      height: 200px;
+      width: 250px;
       margin-left: 100px;
     }
   
     #changeBtn {
-      margin: 20px auto;
-      margin-left: 130px;
+      /* margin: 20px auto; */
+      position: relative;
+      margin-left: 100px;
     }
   
     #ingredientBox {
@@ -183,13 +228,26 @@ h3{
     }
   
     .mealimg {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
     }
   
     #footer {
       margin-left: 0;
       text-align: center;
     }
+    #inputBox{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      position: relative;
+      top: 50px;
+      right: 50px;
+      outline: none;
+      border-radius: 10px;
   }
+h3{
+    position: relative;
+    left: 50px;
+  }
+
+}
   
